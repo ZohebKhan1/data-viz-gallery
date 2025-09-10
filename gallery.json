@@ -1,0 +1,22 @@
+[
+  {
+    "file": "sample-1.svg",
+    "title": "Differential Expression Volcano",
+    "tags": [
+      "RNA-seq",
+      "volcano",
+      "DESeq2"
+    ],
+    "description": "Stylized volcano plot showcasing significant genes."
+  },
+  {
+    "file": "sample-2.svg",
+    "title": "Hedgehog Pathway Schematic",
+    "tags": [
+      "pathway",
+      "Hedgehog",
+      "development"
+    ],
+    "description": "Simplified pathway diagram for presentation use."
+  }
+]

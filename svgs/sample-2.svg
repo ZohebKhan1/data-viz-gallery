@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title>Hedgehog Pathway Schematic (Sample)</title>
+  <desc>Illustrative schematic of the Hedgehog pathway components.</desc>
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#7dd3fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#0b0b0c"/>
+  <g transform="translate(60,40)">
+    <rect width="780" height="500" rx="18" fill="#121214" stroke="#2a2a2e"/>
+    <text x="390" y="-8" fill="#eaeaea" text-anchor="middle" font-family="Inter" font-size="18">Hedgehog Pathway</text>
+    <g font-family="Inter" fill="#eaeaea" font-size="13">
+      <rect x="80" y="60" width="180" height="60" rx="10" fill="url(#grad)" opacity="0.85"/><text x="170" y="95" text-anchor="middle">Ligand (Shh)</text>
+      <rect x="360" y="60" width="180" height="60" rx="10" fill="url(#grad)" opacity="0.85"/><text x="450" y="95" text-anchor="middle">Receptor (Ptch)</text>
+      <rect x="640" y="60" width="180" height="60" rx="10" fill="url(#grad)" opacity="0.85"/><text x="730" y="95" text-anchor="middle">Smo</text>
+      <circle cx="270" cy="90" r="6" fill="#7dd3fc"/><circle cx="360" cy="90" r="6" fill="#7dd3fc"/>
+      <circle cx="540" cy="90" r="6" fill="#7dd3fc"/><circle cx="640" cy="90" r="6" fill="#7dd3fc"/>
+      <rect x="360" y="220" width="180" height="60" rx="10" fill="url(#grad)" opacity="0.85"/><text x="450" y="255" text-anchor="middle">GLI TFs</text>
+    </g>
+  </g>
+</svg>
