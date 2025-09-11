@@ -1,23 +1,11 @@
-# SVG Portfolio (Minimal Static Template)
+# Data visualization gallery made with ggplot2 
 
-A clean, minimalist gallery to showcase scientific SVG visualizations. No build tools required — just upload your SVGs to `/svgs` and list them in `gallery.json`.
+Data visualization is, in my opinion, an underappreciated skill in the bioinformatics field. Pretty/aesthetically-pleasing figures will never turn bad data into good data, but they can definitely already-good-data to something even better.
 
-## Quick Start
-1. Put your SVG files into `/svgs`.
-2. Edit `gallery.json` to register titles, tags, and descriptions.
-3. Open `index.html` in a browser, or deploy to GitHub Pages / any static host.
+This gallery contains a variety of visualizations that I have created for various 'omics analyses (RNA/ChIP/ATACseq), but the majority of these figures can be adapted to completely different data modalities. 
 
-## Add an item
-```json
-{
-  "file": "my-figure.svg",
-  "title": "My Figure",
-  "tags": ["RNA-seq", "DEGs"],
-  "description": "Short description for context."
-}
-```
+All code used to generate figures shown in this gallery can be found in this repository.
 
-## Notes
-- Keep accessibility: include `<title>` and `<desc>` in your SVGs.
-- Optimize with SVGO / SVGOMG for smaller file sizes.
-- Dark/light theme toggle is built in.
+Please e-mail zohebk@uchicago.edu for any questions or suggestions regarding these figures.
+
+
