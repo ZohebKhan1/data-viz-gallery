@@ -7,6 +7,7 @@
   <meta name="description" content="Minimal portfolio of scientific SVG visualizations by Zoheb Khan (University of Chicago, Moskowitz Lab)." />
   <meta name="theme-color" content="#0b0b0c" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <!-- Keep your font preloads -->
   <link rel="preload" href="fonts/HelveticaNeueRoman.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="fonts/HelveticaNeueMedium.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="fonts/HelveticaNeueBold.otf" as="font" type="font/otf" crossorigin>
@@ -17,29 +18,30 @@
     <!-- Hero -->
     <section id="hero" class="container reveal">
       <h1 class="hero-title">Zoheb Khan</h1>
+      <div class="contact">
+        <a href="mailto:zohebk@uchicago" class="contact-link">zohebk@uchicago</a>
+        <span class="sep">·</span>
+        <a href="mailto:zohebkhan600@gmail.com" class="contact-link">zohebkhan600@gmail.com</a>
+        <span class="sep">·</span>
+        <a href="https://github.com/ZohebKhan1" target="_blank" rel="noopener" class="contact-link">GitHub</a>
+      </div>
     </section>
 
-    <!-- About -->
+    <!-- About me -->
     <section id="about" class="container reveal">
-      <h2>About</h2>
+      <h2>About me</h2>
       <p class="about-text">
-        Bioinformatician focused on RNA‑seq and scientific visualization at the University of Chicago (Moskowitz Lab).
-        This site curates selected figures as clean, accessible SVGs.
+        Bioinformatician working on investigating Hedgehog signaling-dependent gene regulatory networks governing cardiac, lung, esophageal, and neuronal development at the Moskowitz Lab at the University of Chicago. B.A. Biology w/ Genetics Specialization @ The University of Chicago, 2022. My work primarily is involved with time series bulk RNA seq, sc/snRNAseq psuedotime analysis, multi-omic studies with ATAC/ChIPseq and Hi-C/Micro-C to define enhancer-target gene interactions.
+      </p>
+      <div class="spacer"></div>
+      <p class="about-text">
+        My previous research investigated Tbx5-dependent gene regulatory networks in atrial fibrillation pathogenesis through integrative analysis of GWAS data, linkage disequilibrium mapping, and ENCODE consortium epigenomic datasets to identify regulatory variants that modulate transcription factor binding sites.
       </p>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="container reveal">
-      <h2>Data visualization gallery</h2>
-      <div id="gallery-root" aria-live="polite" aria-busy="true"></div>
-    </section>
-  </main>
+    <!-- About this gallery -->
+    <section id="about-gallery" class="container reveal">
+      <h2>About this gallery</h2>
+      <p class="about-text">
+        The purpose of this gallery to showcase various d
 
-  <footer class="container footer">
-    <small>© <span id="year"></span> Zoheb Khan</small>
-    <a class="backtotop" href="#top" aria-label="Back to top">↑</a>
-  </footer>
-
-  <script src="assets/script.js" defer></script>
-</body>
-</html>
