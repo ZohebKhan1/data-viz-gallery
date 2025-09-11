@@ -7,7 +7,7 @@
   <meta name="description" content="Minimal portfolio of scientific SVG visualizations by Zoheb Khan (University of Chicago, Moskowitz Lab)." />
   <meta name="theme-color" content="#0b0b0c" />
   <link rel="stylesheet" href="assets/styles.css" />
-  <!-- Keep your font preloads -->
+  <!-- Keep your self-hosted Helvetica Neue preloads -->
   <link rel="preload" href="fonts/HelveticaNeueRoman.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="fonts/HelveticaNeueMedium.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="fonts/HelveticaNeueBold.otf" as="font" type="font/otf" crossorigin>
@@ -15,35 +15,67 @@
 </head>
 <body>
   <main id="top">
-    <!-- Hero -->
-    <section id="hero" class="container reveal">
-      <h1 class="hero-title">Zoheb Khan</h1>
-      <div class="contact">
-        <a href="mailto:zohebk@uchicago" class="contact-link">zohebk@uchicago</a>
-        <span class="sep">·</span>
+    <!-- Masthead: outside of columns, left-aligned -->
+    <header id="masthead" class="container reveal">
+      <h1 class="site-title">ggplot2 visualization gallery</h1>
+      <h2 class="name-title">Zoheb Khan</h2>
+    </header>
+
+    <!-- Hero grid: title on left is above, contact on right here -->
+    <section id="hero" class="container reveal hero-grid">
+      <div class="hero-left"></div>
+      <aside class="hero-right contact-rail">
+        <a href="mailto:zohebk@uchicago.edu" class="contact-link">zohebk@uchicago.edu</a>
         <a href="mailto:zohebkhan600@gmail.com" class="contact-link">zohebkhan600@gmail.com</a>
-        <span class="sep">·</span>
-        <a href="https://github.com/ZohebKhan1" target="_blank" rel="noopener" class="contact-link">GitHub</a>
-      </div>
+        <a href="https://github.com/ZohebKhan1" target="_blank" rel="noopener" class="contact-link">github.com/ZohebKhan1</a>
+      </aside>
     </section>
 
-    <!-- About me -->
-    <section id="about" class="container reveal">
-      <h2>About me</h2>
-      <p class="about-text">
-        Bioinformatician working on investigating Hedgehog signaling-dependent gene regulatory networks governing cardiac, lung, esophageal, and neuronal development at the Moskowitz Lab at the University of Chicago. B.A. Biology w/ Genetics Specialization @ The University of Chicago, 2022. My work primarily is involved with time series bulk RNA seq, sc/snRNAseq psuedotime analysis, multi-omic studies with ATAC/ChIPseq and Hi-C/Micro-C to define enhancer-target gene interactions.
-      </p>
-      <div class="spacer"></div>
-      <p class="about-text">
-        My previous research investigated Tbx5-dependent gene regulatory networks in atrial fibrillation pathogenesis through integrative analysis of GWAS data, linkage disequilibrium mapping, and ENCODE consortium epigenomic datasets to identify regulatory variants that modulate transcription factor binding sites.
-      </p>
+    <!-- Intro: 3-column responsive grid -->
+    <section id="intro" class="container reveal intro-grid">
+      <article class="intro-col">
+        <h3 class="intro-h">About me</h3>
+        <p class="about-text">
+          Bioinformatician working on investigating Hedgehog signaling-dependent gene regulatory networks governing
+          cardiac, lung, esophageal, and neuronal development at the Moskowitz Lab at the University of Chicago.
+          My work primarily involves time-series bulk RNA-seq, sc/snRNA-seq pseudotime analysis, and multi-omic studies
+          with ATAC-seq/ChIP-seq and Hi-C/Micro-C to define enhancer–target gene interactions.
+        </p>
+        <div class="spacer"></div>
+        <p class="about-text">
+          My previous research investigated Tbx5-dependent gene regulatory networks in atrial fibrillation pathogenesis
+          through integrative analysis of GWAS data, linkage disequilibrium mapping, and ENCODE consortium epigenomic datasets
+          to identify regulatory variants that modulate transcription factor binding sites.
+        </p>
+      </article>
+
+      <article class="intro-col">
+        <h3 class="intro-h">Education</h3>
+        <p class="about-text tight">
+          B.A. Biology w/ Genetics Specialization @ The University of Chicago, 2022.
+        </p>
+      </article>
+
+      <article class="intro-col">
+        <h3 class="intro-h">Methods &amp; tools</h3>
+        <p class="about-text tight"><strong>Languages:</strong> R</p>
+        <p class="about-text tight"><strong>Packages:</strong> tidyverse, dplyr</p>
+        <p class="about-text tight"><strong>Final visual modifications:</strong> Adobe Illustrator</p>
+        <div class="spacer-xs"></div>
+        <p class="about-text">
+          All R scripts used to generate figures/plots in this gallery can be found in the following repository:
+          <a class="repo-link" href="https://github.com/ZohebKhan1" target="_blank" rel="noopener">github.com/ZohebKhan1</a>
+        </p>
+      </article>
     </section>
 
     <!-- About this gallery -->
     <section id="about-gallery" class="container reveal">
       <h2>About this gallery</h2>
       <p class="about-text">
-        The purpose of this gallery to showcase various data visualizations methods that I have generated over the past year, primarily for presenting time series bulk RNAseq or ATAC seq data.  While I primarily used these visualization methods for genomic analyses, the majority of these figures can quite easily be repurposed depending on the modality of your data.
+        The purpose of this gallery to showcase various data visualizations methods that I have generated over the past year,
+        primarily for presenting time series bulk RNAseq or ATAC seq data. While I primarily used these visualization methods
+        for genomic analyses, the majority of these figures can quite easily be repurposed depending on the modality of your data.
       </p>
     </section>
 
