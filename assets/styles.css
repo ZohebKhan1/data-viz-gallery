@@ -1,7 +1,7 @@
 /* ===============================
    Self-hosted Helvetica Neue
-   Source files: /fonts/*.otf (repo root)
-   Note: OTF works but is heavier than WOFF2. Consider converting later.
+   Source files: /fonts/*.otf
+   (OTF works but is heavier than WOFF2; consider converting later.)
    =============================== */
 @font-face {
   font-family: "Helvetica Neue";
@@ -45,7 +45,6 @@
   font-style: italic;
   font-display: swap;
 }
-/* Regular (Roman) */
 @font-face {
   font-family: "Helvetica Neue";
   src: url("../fonts/HelveticaNeueRoman.otf") format("opentype");
@@ -53,8 +52,6 @@
   font-style: normal;
   font-display: swap;
 }
-/* If you later add a 400 italic file, declare it here (weight:400; style:italic) */
-
 @font-face {
   font-family: "Helvetica Neue";
   src: url("../fonts/HelveticaNeueMedium.otf") format("opentype");
@@ -69,7 +66,6 @@
   font-style: italic;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Helvetica Neue";
   src: url("../fonts/HelveticaNeueBold.otf") format("opentype");
@@ -84,7 +80,6 @@
   font-style: italic;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Helvetica Neue";
   src: url("../fonts/HelveticaNeueHeavy.otf") format("opentype");
@@ -99,7 +94,6 @@
   font-style: italic;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Helvetica Neue";
   src: url("../fonts/HelveticaNeueBlack.otf") format("opentype");
@@ -156,7 +150,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family:
-    "Helvetica Neue", /* self-hosted family above */
+    "Helvetica Neue",
     Helvetica, Arial, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
   font-kerning: normal;
   -webkit-font-smoothing: antialiased;
@@ -170,26 +164,51 @@ body {
 }
 
 h1, h2, h3, h4 { margin: 0 0 14px 0; letter-spacing: -0.01em; }
-p { line-height: 1.65; margin: 0.5rem 0 0 0; }
+p { line-height: 1.7; margin: 0.5rem 0 0 0; }
 
 /* Hero */
 #hero {
-  padding-top: 12vh;
-  padding-bottom: 2vh;
+  padding-top: 10vh;
+  padding-bottom: 1vh;
+  border-bottom: 1px solid var(--line);
 }
 .hero-title {
   font-size: clamp(42px, 9vw, 78px);
   font-weight: 600;
   letter-spacing: -0.02em;
 }
-
-/* About */
-#about .about-text {
+.contact {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
   color: var(--muted);
-  max-width: 68ch;
+}
+.contact .sep { opacity: 0.6; }
+.contact .contact-link {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+  transition: color .25s var(--reveal-ease), border-color .25s var(--reveal-ease);
+}
+.contact .contact-link:hover {
+  color: var(--text);
+  border-color: var(--text);
 }
 
+/* About blocks */
+#about, #about-gallery { padding-top: 36px; }
+#about h2, #about-gallery h2 { font-weight: 600; }
+.about-text {
+  color: var(--muted);
+  max-width: 74ch;
+  font-size: 1.02rem;
+}
+.spacer { height: 12px; }
+
 /* Gallery */
+#gallery { padding-top: 32px; }
 #gallery > h2 {
   font-size: 22px;
   font-weight: 600;
