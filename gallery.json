@@ -10,17 +10,6 @@
           "description": "Stylized volcano plot highlighting significant genes (placeholder thresholds)."
         }
       ]
-    },
-    {
-      "title": "Pathways & Schematic",
-      "description": "Mechanistic overviews and signaling readouts.",
-      "items": [
-        {
-          "file": "sample-2.svg",
-          "name": "Hedgehog Pathway Schematic",
-          "description": "Simplified overview of Hedgehog components; illustrative only."
-        }
-      ]
     }
   ]
 }
