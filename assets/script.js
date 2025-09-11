@@ -4,7 +4,6 @@
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Guard for older browsers (very unlikely, but safe)
   var supportsIO = 'IntersectionObserver' in window;
 
   function addReveal(el) {
@@ -40,7 +39,7 @@
     });
 
   function escapeHtml(s) {
-    return String(s || '').replace(/[&<>"']/g, function(m) {
+    return String(s || '').replace(/[&<>\"']/g, function(m) {
       return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[m];
     });
   }
