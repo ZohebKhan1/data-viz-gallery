@@ -3,69 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SVG Portfolio · Minimal Gallery</title>
-  <meta name="description" content="A clean, minimalist gallery for showcasing scientific SVG visualizations." />
-  <meta property="og:title" content="SVG Portfolio · Minimal Gallery" />
-  <meta property="og:description" content="A clean, minimalist gallery for scientific SVGs." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>Zoheb Khan — Data Visualization</title>
+  <meta name="description" content="Minimal portfolio of scientific SVG visualizations by Zoheb Khan (University of Chicago, Moskowitz Lab)." />
+  <meta name="theme-color" content="#0b0b0c" />
   <link rel="stylesheet" href="assets/styles.css" />
-  <script>
-    // Apply saved theme before paint to avoid flash
-    (function() {
-      try {
-        const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.dataset.theme = saved;
-      } catch (e) {}
-    })();
-  </script>
+  <link rel="canonical" href="./" />
 </head>
 <body>
-  <header class="container page-header">
-    <div class="branding">
-      <h1>SVG Portfolio</h1>
-      <p>Clean, minimalist gallery for scientific visualizations.</p>
-    </div>
-    <nav class="controls">
-      <input id="search" type="search" placeholder="Search title, tags…" aria-label="Search" />
-      <button id="themeToggle" class="ghost" aria-label="Toggle theme">🌓</button>
-    </nav>
-  </header>
+  <main id="top">
+    <!-- Hero -->
+    <section id="hero" class="container reveal">
+      <h1 class="hero-title">Zoheb Khan</h1>
+    </section>
 
-  <section class="container filters" id="filters" aria-label="Filters">
-    <!-- Filters will be injected here -->
-  </section>
+    <!-- About -->
+    <section id="about" class="container reveal">
+      <h2>About</h2>
+      <p class="about-text">
+        Bioinformatician focused on RNA‑seq and scientific visualization at the University of Chicago (Moskowitz Lab).
+        This site curates selected figures as clean, accessible SVGs.
+      </p>
+    </section>
 
-  <main class="container">
-    <div id="grid" class="grid" aria-live="polite" aria-busy="true">
-      <!-- Cards injected by JS -->
-    </div>
+    <!-- Gallery -->
+    <section id="gallery" class="container reveal">
+      <h2>Data visualization gallery</h2>
+      <div id="gallery-root" aria-live="polite" aria-busy="true"></div>
+    </section>
   </main>
 
-  <footer class="container page-footer">
-    <small>Built with a lightweight static template. Edit <code>gallery.json</code> and add SVGs to <code>/svgs</code> to update.</small>
+  <footer class="container footer">
+    <small>© <span id="year"></span> Zoheb Khan</small>
+    <a class="backtotop" href="#top" aria-label="Back to top">↑</a>
   </footer>
-
-  <!-- Modal -->
-  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal-backdrop" data-close></div>
-    <div class="modal-dialog" role="document">
-      <button class="close" data-close aria-label="Close">×</button>
-      <div class="modal-body">
-        <h2 id="modal-title"></h2>
-        <p id="modal-desc" class="muted"></p>
-        <div class="modal-media" id="modal-media" aria-label="SVG preview"></div>
-        <div class="modal-actions">
-          <a id="downloadLink" class="button" download>Download SVG</a>
-          <button id="copyLink" class="ghost">Copy Link</button>
-          <button id="openNew" class="ghost">Open Raw</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="assets/script.js" defer></script>
 </body>

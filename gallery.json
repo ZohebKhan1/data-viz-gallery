@@ -1,22 +1,26 @@
-[
-  {
-    "file": "sample-1.svg",
-    "title": "Differential Expression Volcano",
-    "tags": [
-      "RNA-seq",
-      "volcano",
-      "DESeq2"
-    ],
-    "description": "Stylized volcano plot showcasing significant genes."
-  },
-  {
-    "file": "sample-2.svg",
-    "title": "Hedgehog Pathway Schematic",
-    "tags": [
-      "pathway",
-      "Hedgehog",
-      "development"
-    ],
-    "description": "Simplified pathway diagram for presentation use."
-  }
-]
+{
+  "categories": [
+    {
+      "title": "RNA-seq (bulk)",
+      "description": "Differential expression, PCA, and longitudinal trends.",
+      "items": [
+        {
+          "file": "sample-1.svg",
+          "name": "Differential Expression Volcano",
+          "description": "Stylized volcano plot highlighting significant genes (placeholder thresholds)."
+        }
+      ]
+    },
+    {
+      "title": "Pathways & Schematic",
+      "description": "Mechanistic overviews and signaling readouts.",
+      "items": [
+        {
+          "file": "sample-2.svg",
+          "name": "Hedgehog Pathway Schematic",
+          "description": "Simplified overview of Hedgehog components; illustrative only."
+        }
+      ]
+    }
+  ]
+}
