@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(powershell:*)",
+      "Bash(python:*)",
+      "Bash(start index.html)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,201 +1,78 @@
-/* ===============================
-   Self-hosted Helvetica Neue
-   Source files: /fonts/*.otf
-   (OTF works but is heavier than WOFF2; consider converting later.)
-   =============================== */
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueThin.otf") format("opentype");
-  font-weight: 100; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueThinItalic.otf") format("opentype");
-  font-weight: 100; font-style: italic; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueUltraLight.otf") format("opentype");
-  font-weight: 200; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueUltraLightItalic.otf") format("opentype");
-  font-weight: 200; font-style: italic; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueLight.otf") format("opentype");
-  font-weight: 300; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueLightItalic.otf") format("opentype");
-  font-weight: 300; font-style: italic; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueRoman.otf") format("opentype");
-  font-weight: 400; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueMedium.otf") format("opentype");
-  font-weight: 500; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueMediumItalic.otf") format("opentype");
-  font-weight: 500; font-style: italic; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueBold.otf") format("opentype");
-  font-weight: 700; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueBoldItalic.otf") format("opentype");
-  font-weight: 700; font-style: italic; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueHeavy.otf") format("opentype");
-  font-weight: 800; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueHeavyItalic.otf") format("opentype");
-  font-weight: 800; font-style: italic; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueBlack.otf") format("opentype");
-  font-weight: 900; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeueBlackItalic.otf") format("opentype");
-  font-weight: 900; font-style: italic; font-display: swap;
-}
-
-/* ===============================
-   Theme
-   =============================== */
-:root{
-  --bg:#0b0b0c; --text:#e9e9ea; --muted:#a0a0a8; --line:#1e1e22; --panel:#111114;
-  --accent:#6ec8ff; --shadow:rgba(0,0,0,.35);
-  --maxw:980px; --radius:16px; --radius-sm:12px;
-  --reveal-duration:.75s; --reveal-ease:cubic-bezier(.21,.61,.35,1);
-}
-@media (prefers-color-scheme:light){
-  :root{ --bg:#fff; --text:#0b0b0c; --muted:#585862; --line:#e7e7ec; --panel:#fbfbfd; --accent:#245eea; --shadow:rgba(0,0,0,.08); }
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-html{scroll-behavior:smooth}
-body{
-  margin:0; background:var(--bg); color:var(--text);
-  font-family:"Helvetica Neue", Helvetica, Arial, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
-  font-kerning:normal; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-}
-.container{ width:min(var(--maxw),92vw); margin-inline:auto; padding:60px 0; }
-h1,h2,h3,h4{ margin:0 0 14px 0; letter-spacing:-.01em }
-p{ line-height:1.7; margin:.5rem 0 0 0 }
-
-/* ===============================
-   Masthead (outside columns)
-   =============================== */
-#masthead{ padding-top:8vh; padding-bottom:10px; }
-.site-title{
-  font-size:clamp(22px,4.5vw,34px);
-  font-weight:600; letter-spacing:-.015em;
-}
-.name-title{
-  font-size:clamp(42px,8vw,72px);
-  font-weight:700; letter-spacing:-.02em; margin-top:6px;
-}
-
-/* ===============================
-   Hero grid: right-aligned contact rail
-   =============================== */
-.hero-grid{
-  display:grid; grid-template-columns: 1fr 300px; gap:24px; align-items:start;
-  border-bottom:1px solid var(--line); padding-top:10px; padding-bottom:18px;
-}
-.hero-left{ min-height:1px; } /* left column intentionally empty—masthead sits above */
-.contact-rail{
-  justify-self:end; text-align:right; display:flex; flex-direction:column; gap:6px;
-}
-.contact-link{
-  color:var(--muted); text-decoration:none; border-bottom:1px dotted transparent;
-  transition: color .25s var(--reveal-ease), border-color .25s var(--reveal-ease);
-  word-break:break-word;
-}
-.contact-link:hover{ color:var(--text); border-color:var(--text) }
-
-/* ===============================
-   Intro: 3-column responsive grid
-   =============================== */
-.intro-grid{
-  display:grid; gap:26px; align-items:start;
-  grid-template-columns: 1fr;
-}
-.intro-h{ font-weight:600; font-size:18px; margin-bottom:6px }
-.about-text{ color:var(--muted); max-width:74ch; font-size:1.02rem }
-.about-text.tight{ margin-top:.25rem }
-.spacer{ height:12px } .spacer-xs{ height:6px }
-.repo-link{ color:var(--text); text-underline-offset:2px }
-
-@media (min-width: 860px){
-  .intro-grid{ grid-template-columns: 1.15fr .6fr .9fr; }
-}
-
-/* ===============================
-   Gallery
-   =============================== */
-#gallery{ padding-top:32px }
-#gallery>h2{ font-size:22px; font-weight:600; margin-bottom:6px }
-.category{ margin-top:28px; border-top:1px solid var(--line); padding-top:22px }
-.category h3{ margin:0 0 6px; font-size:18px; font-weight:600 }
-.category p.category-desc{ margin:0 0 18px; color:var(--muted); max-width:75ch }
-.figure-list{ display:grid; grid-template-columns:1fr; gap:28px }
-.figure{
-  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
-  padding:14px; box-shadow:0 14px 50px var(--shadow);
-  transition: transform .35s var(--reveal-ease), box-shadow .35s var(--reveal-ease), border-color .35s var(--reveal-ease);
-  will-change: transform, box-shadow;
-}
-.figure:hover{ transform:translateY(-2px); box-shadow:0 22px 70px var(--shadow); border-color:rgba(128,128,255,.22) }
-.figure-media{
-  display:grid; place-items:center; background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(0,0,0,.05));
-  border:1px solid var(--line); border-radius:var(--radius-sm); overflow:hidden; min-height:280px;
-}
-.figure-media img,.figure-media object{ width:100%; height:auto; max-height:70vh; object-fit:contain; transform:translateZ(0) }
-figcaption{ margin-top:10px }
-figcaption h4{ margin:4px 0 6px 0; font-size:16px; font-weight:600 }
-figcaption p{ margin:0; color:var(--muted) }
-
-/* ===============================
-   Footer
-   =============================== */
-.footer{
-  display:flex; align-items:center; justify-content:space-between;
-  border-top:1px solid var(--line); padding-top:20px; color:var(--muted); position:relative;
-}
-.backtotop{
-  position:absolute; right:0; top:16px; text-decoration:none; font-size:18px; padding:6px 10px;
-  border:1px solid var(--line); border-radius:10px; color:var(--text); background:var(--panel);
-  transition: transform .25s var(--reveal-ease), box-shadow .25s var(--reveal-ease);
-}
-.backtotop:hover{ transform:translateY(-1px); box-shadow:0 10px 24px var(--shadow) }
-
-/* ===============================
-   Reveal animations
-   =============================== */
-.reveal{ opacity:0; transform:translateY(12px) }
-.reveal.revealed{ opacity:1; transform:translateY(0); transition:opacity var(--reveal-duration) var(--reveal-ease), transform var(--reveal-duration) var(--reveal-ease) }
-@media (prefers-reduced-motion:reduce){
-  *{ transition:none !important; animation:none !important }
-  html{ scroll-behavior:auto }
+{
+  "categories": [
+    {
+      "title": "Distribution & Statistical Plots",
+      "description": "Visualizations for exploring data distributions, variability, and statistical relationships across experimental conditions.",
+      "items": [
+        {
+          "file": "boxplot.svg",
+          "name": "Box Plot Analysis",
+          "description": "Statistical distribution visualization showing median, quartiles, and outliers across multiple experimental groups. Ideal for comparing gene expression levels between conditions."
+        },
+        {
+          "file": "violin_plot.svg",
+          "name": "Violin Plot",
+          "description": "Combines box plot statistics with kernel density estimation to show the full distribution shape. Perfect for visualizing expression patterns in single-cell RNA-seq data."
+        },
+        {
+          "file": "dotplot.svg",
+          "name": "Dot Plot Matrix",
+          "description": "Multi-dimensional visualization displaying gene expression levels across different cell types or conditions using size and color encoding for dual-metric representation."
+        },
+        {
+          "file": "single_dotplot.svg",
+          "name": "Single Dot Plot",
+          "description": "Focused dot plot visualization for comparing expression patterns of selected genes across specific cell populations or experimental timepoints."
+        }
+      ]
+    },
+    {
+      "title": "Temporal & Sequential Analysis",
+      "description": "Time-series and trajectory visualizations for understanding dynamic biological processes and developmental patterns.",
+      "items": [
+        {
+          "file": "lineplot.svg",
+          "name": "Time Series Line Plot",
+          "description": "Temporal gene expression dynamics across multiple timepoints. Captures expression trajectories during differentiation or treatment response studies."
+        },
+        {
+          "file": "response_plot.svg",
+          "name": "Response Curve Analysis",
+          "description": "Dose-response or time-response curves showing biological system reactions to varying stimuli concentrations or temporal exposures."
+        }
+      ]
+    },
+    {
+      "title": "High-Dimensional Data",
+      "description": "Complex visualizations for multi-dimensional genomic data including dimensional reduction and correlation analyses.",
+      "items": [
+        {
+          "file": "scatterplot.svg",
+          "name": "Scatter Plot Analysis",
+          "description": "High-density scatter plot for exploring relationships between continuous variables. Features regression lines and confidence intervals for correlation analysis."
+        },
+        {
+          "file": "umap_plot.svg",
+          "name": "UMAP Dimensionality Reduction",
+          "description": "Uniform Manifold Approximation and Projection visualization revealing cell clusters and trajectories in single-cell transcriptomic datasets."
+        },
+        {
+          "file": "maplot.svg",
+          "name": "MA Plot",
+          "description": "Log-ratio (M) versus mean expression (A) plot for differential expression analysis. Highlights significantly regulated genes with fold-change thresholds."
+        }
+      ]
+    },
+    {
+      "title": "Circular & Network Visualizations",
+      "description": "Specialized plots for genomic interactions and circular chromosome representations.",
+      "items": [
+        {
+          "file": "circos_plot.svg",
+          "name": "Circos Plot",
+          "description": "Circular genomic visualization displaying chromosomal rearrangements, copy number variations, and inter-chromosomal interactions from Hi-C or ChIP-seq experiments."
+        }
+      ]
+    }
+  ]
 }

@@ -1,96 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zoheb Khan — Data Visualization</title>
-  <meta name="description" content="Minimal portfolio of scientific SVG visualizations by Zoheb Khan (University of Chicago, Moskowitz Lab)." />
-  <meta name="theme-color" content="#0b0b0c" />
-  <link rel="stylesheet" href="assets/styles.css" />
-  <!-- Keep your self-hosted Helvetica Neue preloads -->
-  <link rel="preload" href="fonts/HelveticaNeueRoman.otf" as="font" type="font/otf" crossorigin>
-  <link rel="preload" href="fonts/HelveticaNeueMedium.otf" as="font" type="font/otf" crossorigin>
-  <link rel="preload" href="fonts/HelveticaNeueBold.otf" as="font" type="font/otf" crossorigin>
-  <link rel="canonical" href="./" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A professional gallery showcasing publication-quality bioinformatics data visualizations">
+    <title>Data Visualization Gallery</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main id="top">
-    <!-- Masthead: outside of columns, left-aligned -->
-    <header id="masthead" class="container reveal">
-      <h1 class="site-title">ggplot2 visualization gallery</h1>
-      <h2 class="name-title">Zoheb Khan</h2>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">Data Visualization Gallery</h1>
+            <p class="site-subtitle">Publication-Quality Bioinformatics Visualizations</p>
+        </div>
     </header>
 
-    <!-- Hero grid: title on left is above, contact on right here -->
-    <section id="hero" class="container reveal hero-grid">
-      <div class="hero-left"></div>
-      <aside class="hero-right contact-rail">
-        <a href="mailto:zohebk@uchicago.edu" class="contact-link">zohebk@uchicago.edu</a>
-        <a href="mailto:zohebkhan600@gmail.com" class="contact-link">zohebkhan600@gmail.com</a>
-        <a href="https://github.com/ZohebKhan1" target="_blank" rel="noopener" class="contact-link">github.com/ZohebKhan1</a>
-      </aside>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Scientific Data Visualization Portfolio</h2>
+                <p class="hero-description">
+                    A curated collection of publication-ready visualizations from comprehensive bioinformatics analyses 
+                    including RNA-seq, ATAC-seq, and ChIP-seq experiments. Each visualization represents careful 
+                    analysis and thoughtful design choices for clear scientific communication.
+                </p>
+                <div class="hero-meta">
+                    <span class="meta-item">10 Visualizations</span>
+                    <span class="meta-separator">•</span>
+                    <span class="meta-item">Multiple Analysis Types</span>
+                    <span class="meta-separator">•</span>
+                    <span class="meta-item">Publication Ready</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Intro: 3-column responsive grid -->
-    <section id="intro" class="container reveal intro-grid">
-      <article class="intro-col">
-        <h3 class="intro-h">About me</h3>
-        <p class="about-text">
-          Bioinformatician working on investigating Hedgehog signaling-dependent gene regulatory networks governing
-          cardiac, lung, esophageal, and neuronal development at the Moskowitz Lab at the University of Chicago.
-          My work primarily involves time-series bulk RNA-seq, sc/snRNA-seq pseudotime analysis, and multi-omic studies
-          with ATAC-seq/ChIP-seq and Hi-C/Micro-C to define enhancer–target gene interactions.
-        </p>
-        <div class="spacer"></div>
-        <p class="about-text">
-          My previous research investigated Tbx5-dependent gene regulatory networks in atrial fibrillation pathogenesis
-          through integrative analysis of GWAS data, linkage disequilibrium mapping, and ENCODE consortium epigenomic datasets
-          to identify regulatory variants that modulate transcription factor binding sites.
-        </p>
-      </article>
+    <!-- Gallery Section -->
+    <main class="gallery-section">
+        <div class="container">
+            <div class="gallery-header">
+                <h2 class="section-title">Visualization Collection</h2>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="distribution">Distribution</button>
+                    <button class="filter-tab" data-filter="dimensional">Dimensional</button>
+                    <button class="filter-tab" data-filter="expression">Expression</button>
+                    <button class="filter-tab" data-filter="genomic">Genomic</button>
+                </div>
+            </div>
+            <div id="gallery" class="gallery-grid">
+                <!-- Gallery items will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
 
-      <article class="intro-col">
-        <h3 class="intro-h">Education</h3>
-        <p class="about-text tight">
-          B.A. Biology w/ Genetics Specialization @ The University of Chicago, 2022.
-        </p>
-      </article>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-container">
+            <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+            <div class="lightbox-content">
+                <div class="lightbox-image-wrapper">
+                    <img id="lightbox-image" src="" alt="">
+                </div>
+                <div class="lightbox-info">
+                    <h3 id="lightbox-title"></h3>
+                    <p id="lightbox-description"></p>
+                </div>
+            </div>
+            <button class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>
+            <button class="lightbox-nav lightbox-next" aria-label="Next image">›</button>
+        </div>
+    </div>
 
-      <article class="intro-col">
-        <h3 class="intro-h">Methods &amp; tools</h3>
-        <p class="about-text tight"><strong>Languages:</strong> R</p>
-        <p class="about-text tight"><strong>Packages:</strong> tidyverse, dplyr</p>
-        <p class="about-text tight"><strong>Final visual modifications:</strong> Adobe Illustrator</p>
-        <div class="spacer-xs"></div>
-        <p class="about-text">
-          All R scripts used to generate figures/plots in this gallery can be found in the following repository:
-          <a class="repo-link" href="https://github.com/ZohebKhan1" target="_blank" rel="noopener">github.com/ZohebKhan1</a>
-        </p>
-      </article>
-    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 Data Visualization Gallery • Built with precision and care</p>
+        </div>
+    </footer>
 
-    <!-- About this gallery -->
-    <section id="about-gallery" class="container reveal">
-      <h2>About this gallery</h2>
-      <p class="about-text">
-        The purpose of this gallery to showcase various data visualizations methods that I have generated over the past year,
-        primarily for presenting time series bulk RNAseq or ATAC seq data. While I primarily used these visualization methods
-        for genomic analyses, the majority of these figures can quite easily be repurposed depending on the modality of your data.
-      </p>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery" class="container reveal">
-      <h2>Data visualization gallery</h2>
-      <div id="gallery-root" aria-live="polite" aria-busy="true"></div>
-    </section>
-  </main>
-
-  <footer class="container footer">
-    <small>© <span id="year"></span> Zoheb Khan</small>
-    <a class="backtotop" href="#top" aria-label="Back to top">↑</a>
-  </footer>
-
-  <script src="assets/script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
